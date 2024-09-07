@@ -28,7 +28,7 @@ router.get("/:name", function (req, res) {
 });
 
 router.patch("/:name", function (req, res) {
-  const foundItem = items.find((cat) => item.name === req.params.name);
+  const foundItem = items.find((item) => item.name === req.params.name);
   if (foundItem === undefined) {
     throw new ExpressError("Item not found", 404);
   }
